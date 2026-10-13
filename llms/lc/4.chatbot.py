@@ -2,8 +2,12 @@
 
 from langchain.chat_models import init_chat_model
 from langchain.messages import SystemMessage, HumanMessage
+from google.genai.types import AutomaticFunctionCallingConfig
 
 model = init_chat_model("gemini-3.1-flash-lite", model_provider="google_genai")
+
+# To supress warning from google SDK
+model = model.bind(automatic_function_calling=AutomaticFunctionCallingConfig(disable=True))
 
 messages = [SystemMessage(content="Give one line answer")]
 
@@ -13,7 +17,7 @@ while True:
         break
 
     if prompt.lower() == 'c':
-        del  messages[1:]   # delete all messages except first one
+        del  messages[1:]   # delete all messages except first one - system message
         print('Starting a new conversation...')
         continue 
 
