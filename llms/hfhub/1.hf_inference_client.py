@@ -1,8 +1,7 @@
-## Set environment variable - HUGGINGFACE_HUB_TOKEN - to access token 
-import keys
+## Set environment variable - HF_TOKEN - to access token 
 from huggingface_hub import InferenceClient
 
-client = InferenceClient(model="openai/gpt-oss-120b" , token=keys.HUGGINGFACE_KEY)
+client = InferenceClient(model="openai/gpt-oss-120b")
 
 messages = [
     {"role": "user", "content": "What is the capital of France?"}
