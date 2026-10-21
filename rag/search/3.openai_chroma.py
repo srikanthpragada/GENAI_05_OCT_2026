@@ -18,7 +18,7 @@ documents = [
 vectorstore = Chroma.from_texts(documents, embeddings_model)
 
 query = "Football"
-results = vectorstore.similarity_search(query, k=2)  # Get the top 3 results
+results = vectorstore.similarity_search(query, k=3)  # Get the top 3 results
 
 for doc in results:
     print(doc.page_content)

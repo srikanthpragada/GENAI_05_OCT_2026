@@ -8,7 +8,7 @@ from langchain_core.documents import Document
 embeddings_model = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
 
 docs = [
-    Document(page_content="AI is transforming the world."),
+    Document(page_content="Cloud computing is the base for modern application"),
     Document(page_content="Machine learning enables data-driven predictions."),
     Document(page_content="Deep learning uses neural networks."),
     Document(page_content="AWS is cloud platform"),

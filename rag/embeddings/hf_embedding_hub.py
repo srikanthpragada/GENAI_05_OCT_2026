@@ -1,4 +1,4 @@
-# Create environment variable - HUGGINGFACEHUB_API_TOKEN
+# Create environment variable - HF_TOKEN
 
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
