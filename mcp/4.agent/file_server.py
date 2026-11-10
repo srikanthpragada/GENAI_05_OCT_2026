@@ -7,8 +7,8 @@ mcp = FastMCP("File Server")
 # Load contents of the file
 @mcp.tool()
 def read_file(filename: str) -> str:
-    """Reads the contents of the given file and return contents
-       Return empty string on error
+    """Reads the contents of the given filename and returns the contents
+       Returns empty string on error
     """
     try:
         with open(filename, "rt") as f:
